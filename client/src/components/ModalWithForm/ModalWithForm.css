@@ -1,4 +1,4 @@
-.register-modal {
+.modal-with-form {
   display: none;
   position: fixed;
   top: 0;
@@ -11,11 +11,15 @@
   z-index: 1000;
 }
 
-.register-modal_opened {
+.modal_opened {
   display: flex;
 }
 
-.register-modal__content {
+.modal__opened {
+  display: flex;
+}
+
+.modal__content {
   background-color: white;
   padding: 20px;
   border-radius: 20px;
@@ -25,14 +29,14 @@
   position: relative;
 }
 
-.register-modal__title {
+.modal__title {
   font-family: "Cabinet Grotesk", sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
 }
 
-.register-modal__close {
+.modal__close {
   background-image: url("/close.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -47,13 +51,13 @@
   right: 20px;
 }
 
-.register-modal__form {
+.modal__form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.register-modal__label {
+.modal__label {
   font-family: "Cabinet Grotesk", sans-serif;
   font-size: 16px;
   line-height: 20px;
@@ -62,7 +66,7 @@
   display: block;
 }
 
-.register-modal__input {
+.modal__input {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #000000;
@@ -73,7 +77,7 @@
   padding: 8px 0;
 }
 
-.register-modal__input::placeholder {
+.modal__input::placeholder {
   font-family: "Cabinet Grotesk", sans-serif;
   font-size: 16px;
   line-height: 20px;
@@ -81,7 +85,7 @@
   color: #000000;
 }
 
-.register-modal__radio-buttons {
+.modal__radio-buttons {
   display: flex;
   flex-direction: column;
   row-gap: 6px;
@@ -90,7 +94,7 @@
   margin: 0;
 }
 
-.register-modal__label_type_radio {
+.modal__label_type_radio {
   font-family: "Cabinet Grotesk", sans-serif;
   font-weight: 600;
   font-size: 16px;
@@ -102,7 +106,7 @@
   cursor: pointer;
 }
 
-.register-modal__radio-input {
+.modal__radio-input {
   appearance: none;
   -webkit-appearance: none;
   border: 2px solid #000;
@@ -114,7 +118,7 @@
   margin: 0;
 }
 
-.register-modal__radio-input:checked::before {
+.modal__radio-input:checked::before {
   content: "";
   position: absolute;
   top: 3px;
@@ -125,12 +129,12 @@
   border-radius: 50%;
 }
 
-.register-modal__label_type_radio input[type="radio"]:checked + span {
+.modal__label_type_radio input[type="radio"]:checked + span {
   color: #000;
   opacity: 1;
 }
 
-.register-modal__submit {
+.modal__submit {
   font-family: "Cabinet Grotesk", sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -144,11 +148,11 @@
   background-color: rgba(0, 0, 0, 1);
 }
 
-.register-modal__submit:hover:enabled {
+.modal__submit:hover:enabled {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.register-modal__submit:disabled {
+.modal__submit:disabled {
   background-color: rgba(0, 0, 0, 0.3);
   cursor: not-allowed;
 }
